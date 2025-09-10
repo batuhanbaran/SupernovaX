@@ -6,8 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D81431412E718F56009FC7FF /* NavigatorUI in Frameworks */ = {isa = PBXBuildFile; productRef = D81431402E718F56009FC7FF /* NavigatorUI */; };
+		D81431852E719548009FC7FF /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = D81431842E719548009FC7FF /* Factory */; };
+		D81431872E719548009FC7FF /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431862E719548009FC7FF /* FactoryKit */; };
+		D81431892E719548009FC7FF /* FactoryTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D81431882E719548009FC7FF /* FactoryTesting */; };
+		D814318C2E719560009FC7FF /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = D814318B2E719560009FC7FF /* NetworkKit */; };
+		D814318E2E719563009FC7FF /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = D814318D2E719563009FC7FF /* Models */; };
+		D81431902E719567009FC7FF /* UIComponentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D814318F2E719567009FC7FF /* UIComponentKit */; };
+		D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431912E71956B009FC7FF /* ExtensionsKit */; };
+		D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431B02E719839009FC7FF /* FavoriteKit */; };
+		D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81431CB2E7198EC009FC7FF /* FavoriteKitLive */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		D81431AF2E719830009FC7FF /* FavoriteKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKit; sourceTree = "<group>"; };
+		D81431CA2E7198E3009FC7FF /* FavoriteKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKitLive; sourceTree = "<group>"; };
 		D8A1865A2E718C2500483B15 /* SupernovaX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupernovaX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A1866B2E718E0200483B15 /* ExtensionsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ExtensionsKit; sourceTree = "<group>"; };
+		D8A1866C2E718E0200483B15 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
+		D8A1866D2E718E0200483B15 /* NetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkKit; sourceTree = "<group>"; };
+		D8A1866E2E718E0200483B15 /* UIComponentKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponentKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,16 +42,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D814318E2E719563009FC7FF /* Models in Frameworks */,
+				D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */,
+				D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */,
+				D81431892E719548009FC7FF /* FactoryTesting in Frameworks */,
+				D81431872E719548009FC7FF /* FactoryKit in Frameworks */,
+				D81431412E718F56009FC7FF /* NavigatorUI in Frameworks */,
+				D814318C2E719560009FC7FF /* NetworkKit in Frameworks */,
+				D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */,
+				D81431852E719548009FC7FF /* Factory in Frameworks */,
+				D81431902E719567009FC7FF /* UIComponentKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D814318A2E719560009FC7FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8A186512E718C2500483B15 = {
 			isa = PBXGroup;
 			children = (
+				D8A186752E718E0200483B15 /* Packages */,
 				D8A1865C2E718C2500483B15 /* SupernovaX */,
+				D814318A2E719560009FC7FF /* Frameworks */,
 				D8A1865B2E718C2500483B15 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +81,27 @@
 				D8A1865A2E718C2500483B15 /* SupernovaX.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D8A1866F2E718E0200483B15 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D81431CA2E7198E3009FC7FF /* FavoriteKitLive */,
+				D81431AF2E719830009FC7FF /* FavoriteKit */,
+				D8A1866B2E718E0200483B15 /* ExtensionsKit */,
+				D8A1866C2E718E0200483B15 /* Models */,
+				D8A1866D2E718E0200483B15 /* NetworkKit */,
+				D8A1866E2E718E0200483B15 /* UIComponentKit */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D8A186752E718E0200483B15 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D8A1866F2E718E0200483B15 /* Core */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +124,16 @@
 			);
 			name = SupernovaX;
 			packageProductDependencies = (
+				D81431402E718F56009FC7FF /* NavigatorUI */,
+				D81431842E719548009FC7FF /* Factory */,
+				D81431862E719548009FC7FF /* FactoryKit */,
+				D81431882E719548009FC7FF /* FactoryTesting */,
+				D814318B2E719560009FC7FF /* NetworkKit */,
+				D814318D2E719563009FC7FF /* Models */,
+				D814318F2E719567009FC7FF /* UIComponentKit */,
+				D81431912E71956B009FC7FF /* ExtensionsKit */,
+				D81431B02E719839009FC7FF /* FavoriteKit */,
+				D81431CB2E7198EC009FC7FF /* FavoriteKitLive */,
 			);
 			productName = SupernovaX;
 			productReference = D8A1865A2E718C2500483B15 /* SupernovaX.app */;
@@ -94,6 +163,10 @@
 			);
 			mainGroup = D8A186512E718C2500483B15;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D814313F2E718F56009FC7FF /* XCRemoteSwiftPackageReference "Navigator" */,
+				D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D8A1865B2E718C2500483B15 /* Products */;
 			projectDirPath = "";
@@ -185,6 +258,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
 			};
 			name = Debug;
 		};
@@ -240,6 +314,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -258,8 +333,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -267,9 +342,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanbaran.SupernovaX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -287,8 +367,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,9 +376,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.batuhanbaran.SupernovaX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -324,6 +409,72 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D814313F2E718F56009FC7FF /* XCRemoteSwiftPackageReference "Navigator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Navigator";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D81431402E718F56009FC7FF /* NavigatorUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D814313F2E718F56009FC7FF /* XCRemoteSwiftPackageReference "Navigator" */;
+			productName = NavigatorUI;
+		};
+		D81431842E719548009FC7FF /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		D81431862E719548009FC7FF /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+		D81431882E719548009FC7FF /* FactoryTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryTesting;
+		};
+		D814318B2E719560009FC7FF /* NetworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkKit;
+		};
+		D814318D2E719563009FC7FF /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		D814318F2E719567009FC7FF /* UIComponentKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponentKit;
+		};
+		D81431912E71956B009FC7FF /* ExtensionsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ExtensionsKit;
+		};
+		D81431B02E719839009FC7FF /* FavoriteKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FavoriteKit;
+		};
+		D81431CB2E7198EC009FC7FF /* FavoriteKitLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FavoriteKitLive;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8A186522E718C2500483B15 /* Project object */;
 }
