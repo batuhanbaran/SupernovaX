@@ -17,11 +17,19 @@
 		D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431912E71956B009FC7FF /* ExtensionsKit */; };
 		D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431B02E719839009FC7FF /* FavoriteKit */; };
 		D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81431CB2E7198EC009FC7FF /* FavoriteKitLive */; };
+		D881CD722E729DF60067499B /* ProductListKit in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD712E729DF60067499B /* ProductListKit */; };
+		D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD732E729DF60067499B /* ProductListKitLive */; };
+		D881CD762E729DF60067499B /* ProductListUI in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD752E729DF60067499B /* ProductListUI */; };
+		D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD912E72BA6B0067499B /* ProductListFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D81431AF2E719830009FC7FF /* FavoriteKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKit; sourceTree = "<group>"; };
 		D81431CA2E7198E3009FC7FF /* FavoriteKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKitLive; sourceTree = "<group>"; };
+		D881CD6D2E729DDD0067499B /* ProductListKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKit; sourceTree = "<group>"; };
+		D881CD6E2E729DDD0067499B /* ProductListKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKitLive; sourceTree = "<group>"; };
+		D881CD6F2E729DDD0067499B /* ProductListUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListUI; sourceTree = "<group>"; };
+		D881CD862E72A4CA0067499B /* ProductListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListFeature; sourceTree = "<group>"; };
 		D8A1865A2E718C2500483B15 /* SupernovaX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupernovaX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A1866B2E718E0200483B15 /* ExtensionsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ExtensionsKit; sourceTree = "<group>"; };
 		D8A1866C2E718E0200483B15 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
@@ -43,12 +51,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D814318E2E719563009FC7FF /* Models in Frameworks */,
+				D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */,
 				D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */,
 				D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */,
+				D881CD762E729DF60067499B /* ProductListUI in Frameworks */,
 				D81431892E719548009FC7FF /* FactoryTesting in Frameworks */,
 				D81431872E719548009FC7FF /* FactoryKit in Frameworks */,
 				D81431412E718F56009FC7FF /* NavigatorUI in Frameworks */,
 				D814318C2E719560009FC7FF /* NetworkKit in Frameworks */,
+				D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */,
+				D881CD722E729DF60067499B /* ProductListKit in Frameworks */,
 				D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */,
 				D81431852E719548009FC7FF /* Factory in Frameworks */,
 				D81431902E719567009FC7FF /* UIComponentKit in Frameworks */,
@@ -63,6 +75,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D881CD702E729DDD0067499B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D881CD862E72A4CA0067499B /* ProductListFeature */,
+				D881CD6D2E729DDD0067499B /* ProductListKit */,
+				D881CD6E2E729DDD0067499B /* ProductListKitLive */,
+				D881CD6F2E729DDD0067499B /* ProductListUI */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		D8A186512E718C2500483B15 = {
@@ -99,6 +122,7 @@
 		D8A186752E718E0200483B15 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				D881CD702E729DDD0067499B /* Domain */,
 				D8A1866F2E718E0200483B15 /* Core */,
 			);
 			path = Packages;
@@ -134,6 +158,10 @@
 				D81431912E71956B009FC7FF /* ExtensionsKit */,
 				D81431B02E719839009FC7FF /* FavoriteKit */,
 				D81431CB2E7198EC009FC7FF /* FavoriteKitLive */,
+				D881CD712E729DF60067499B /* ProductListKit */,
+				D881CD732E729DF60067499B /* ProductListKitLive */,
+				D881CD752E729DF60067499B /* ProductListUI */,
+				D881CD912E72BA6B0067499B /* ProductListFeature */,
 			);
 			productName = SupernovaX;
 			productReference = D8A1865A2E718C2500483B15 /* SupernovaX.app */;
@@ -473,6 +501,22 @@
 		D81431CB2E7198EC009FC7FF /* FavoriteKitLive */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteKitLive;
+		};
+		D881CD712E729DF60067499B /* ProductListKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductListKit;
+		};
+		D881CD732E729DF60067499B /* ProductListKitLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductListKitLive;
+		};
+		D881CD752E729DF60067499B /* ProductListUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductListUI;
+		};
+		D881CD912E72BA6B0067499B /* ProductListFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductListFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

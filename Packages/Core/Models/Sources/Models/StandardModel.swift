@@ -12,7 +12,7 @@ public typealias IdentifiableModel = Identifiable & Equatable & Hashable
 public protocol StandardModel: CodableModel & IdentifiableModel {}
 
 public extension StandardModel {
-    var id: UUID {
+    var uuid: UUID {
         UUID()
     }
 }

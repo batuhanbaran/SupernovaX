@@ -11,11 +11,10 @@ import Models
 import NetworkKit
 import ExtensionsKit
 
-@available(iOS 13.0, *)
-public protocol PaginatedResponse: CodableModel {
-    associatedtype Item: Identifiable & Sendable
-    var total: Int { get }
-    var items: [Item] { get }
+public enum PaginationLayout {
+    case list(Axis.Set = .vertical)
+    case grid(columns: Int, spacing: CGFloat = 8)
+    case adaptiveGrid(minItemWidth: CGFloat, spacing: CGFloat = 8)
 }
 
 public struct PaginationContainerView<
@@ -27,50 +26,79 @@ public struct PaginationContainerView<
     @Binding var items: [Element]
     let path: String
     let responseType: Response.Type
-    var axis: Axis.Set = .vertical
+    let layout: PaginationLayout
     let rowView: (Element) -> RowView
-    let initialTotal: Int
+    let total: Binding<Int>
 
     public init(
         items: Binding<[Element]>,
         path: String,
         responseType: Response.Type,
-        total: Int = 0,
-        axis: Axis.Set = .vertical,
+        total: Binding<Int>,
+        layout: PaginationLayout = .list(),
         @ViewBuilder rowView: @escaping (Element) -> RowView
     ) {
         self._items = items
         self.path = path
         self.responseType = responseType
-        self.initialTotal = total
-        self.axis = axis
+        self.total = total
+        self.layout = layout
         self.rowView = rowView
+    }
+
+    // Backward compatibility initializer
+    public init(
+        items: Binding<[Element]>,
+        path: String,
+        responseType: Response.Type,
+        total: Binding<Int>,
+        axis: Axis.Set = .vertical,
+        @ViewBuilder rowView: @escaping (Element) -> RowView
+    ) {
+        self.init(
+            items: items,
+            path: path,
+            responseType: responseType,
+            total: total,
+            layout: .list(axis),
+            rowView: rowView
+        )
     }
 
     @Injected(\.paginationService)
     private var service
 
     @State private var skip: Int = 0
-    @State private var total: Int = 0
     private let limit: Int = 20
 
     public var body: some View {
-        ScrollView(
-            axis,
-            showsIndicators: axis.contains(.vertical)
-        ) {
-            contentForAxis
-        }
-        .onAppear {
-            if total == 0 && initialTotal > 0 {
-                total = initialTotal
-                skip = items.count
-            }
+        ScrollView(scrollAxis, showsIndicators: showsIndicators) {
+            contentForLayout
         }
     }
 
-    private var contentForAxis: some View {
-        Group {
+    private var scrollAxis: Axis.Set {
+        switch layout {
+        case .list(let axis):
+            return axis
+        case .grid, .adaptiveGrid:
+            return .vertical
+        }
+    }
+
+    private var showsIndicators: Bool {
+        switch layout {
+        case .list(let axis):
+            return axis.contains(.vertical)
+        case .grid, .adaptiveGrid:
+            return true
+        }
+    }
+
+    @ViewBuilder
+    private var contentForLayout: some View {
+        switch layout {
+        case .list(let axis):
             if axis == .horizontal {
                 LazyHStack {
                     itemRows
@@ -80,15 +108,32 @@ public struct PaginationContainerView<
                     itemRows
                 }
             }
+
+        case .grid(let columns, let spacing):
+            LazyVGrid(
+                columns: Array(repeating: GridItem(.flexible(), spacing: spacing), count: columns),
+                spacing: spacing
+            ) {
+                itemRows
+            }
+
+        case .adaptiveGrid(let minItemWidth, let spacing):
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: minItemWidth), spacing: spacing)],
+                spacing: spacing
+            ) {
+                itemRows
+            }
         }
     }
 
     private var itemRows: some View {
-        ForEach(items, id: \.id) { item in
+        ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
             rowView(item)
                 .onAppear {
                     Task {
-                        if items.isLastItem(item) && items.count < total && total > 0 {
+                        // Index tabanlı kontrol - en güvenli ve performanslı
+                        if items.isLastItem(item), items.count < total.wrappedValue {
                             await loadMore()
                         }
                     }
@@ -101,19 +146,13 @@ public struct PaginationContainerView<
     }
 
     private func performLoad(with type: Response.Type) async {
-        var endpoint = DefaultPaginationEndpoint<Response>(total: total, path: path)
+        var endpoint = DefaultPaginationEndpoint<Response>(total: total.wrappedValue, path: path)
         endpoint.limit = limit
         endpoint.skip = skip
 
         if let response = await service.fetch(endpoint) {
             let newItems = response.items
-
-            if total == 0 {
-                total = response.total
-                skip = items.count + newItems.count
-            } else {
-                skip += limit
-            }
+            skip += limit
 
             items.append(contentsOf: newItems)
         }

@@ -8,21 +8,15 @@
 import SwiftUI
 import Factory
 import FavoriteKit
+import ProductListFeature
 
 struct HomeView: View {
     @Environment(FavoriteManager.self) private var favoriteManager
 
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Home View")
-                Button("Add Random Favorite") {
-                    Task {
-                        await favoriteManager.add(.random())
-                    }
-                }
-            }
-            .navigationTitle("Home")
+            ProductListView()
+            .navigationTitle("Products")
         }
     }
 }

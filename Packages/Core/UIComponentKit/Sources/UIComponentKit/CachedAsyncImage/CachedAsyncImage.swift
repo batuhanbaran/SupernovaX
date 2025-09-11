@@ -13,6 +13,7 @@ import UIKit
 import AppKit
 #endif
 
+@MainActor
 public struct CachedAsyncImage: View {
     let url: URL?
 

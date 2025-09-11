@@ -34,9 +34,9 @@ public struct DebounceableSearchTextField: View {
 
             TextField(placeholder, text: $searchText)
                 .textFieldStyle(.plain)
-                .onChange(of: searchText, perform: { newValue in
+                .onChange(of: searchText) { _, newValue in
                     handleTextChange(newValue)
-                })
+                }
 
             if !searchText.isEmpty {
                 Button(action: clearSearch) {
