@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D81431412E718F56009FC7FF /* NavigatorUI in Frameworks */ = {isa = PBXBuildFile; productRef = D81431402E718F56009FC7FF /* NavigatorUI */; };
 		D81431852E719548009FC7FF /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = D81431842E719548009FC7FF /* Factory */; };
 		D81431872E719548009FC7FF /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431862E719548009FC7FF /* FactoryKit */; };
-		D81431892E719548009FC7FF /* FactoryTesting in Frameworks */ = {isa = PBXBuildFile; productRef = D81431882E719548009FC7FF /* FactoryTesting */; };
 		D814318C2E719560009FC7FF /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = D814318B2E719560009FC7FF /* NetworkKit */; };
 		D814318E2E719563009FC7FF /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = D814318D2E719563009FC7FF /* Models */; };
 		D81431902E719567009FC7FF /* UIComponentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D814318F2E719567009FC7FF /* UIComponentKit */; };
 		D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431912E71956B009FC7FF /* ExtensionsKit */; };
 		D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431B02E719839009FC7FF /* FavoriteKit */; };
 		D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81431CB2E7198EC009FC7FF /* FavoriteKitLive */; };
+		D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */ = {isa = PBXBuildFile; productRef = D81CB64B2E75A3F700757F1A /* NavigatorUI */; };
 		D881CD722E729DF60067499B /* ProductListKit in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD712E729DF60067499B /* ProductListKit */; };
 		D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD732E729DF60067499B /* ProductListKitLive */; };
 		D881CD762E729DF60067499B /* ProductListUI in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD752E729DF60067499B /* ProductListUI */; };
@@ -55,9 +54,8 @@
 				D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */,
 				D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */,
 				D881CD762E729DF60067499B /* ProductListUI in Frameworks */,
-				D81431892E719548009FC7FF /* FactoryTesting in Frameworks */,
+				D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */,
 				D81431872E719548009FC7FF /* FactoryKit in Frameworks */,
-				D81431412E718F56009FC7FF /* NavigatorUI in Frameworks */,
 				D814318C2E719560009FC7FF /* NetworkKit in Frameworks */,
 				D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */,
 				D881CD722E729DF60067499B /* ProductListKit in Frameworks */,
@@ -148,10 +146,8 @@
 			);
 			name = SupernovaX;
 			packageProductDependencies = (
-				D81431402E718F56009FC7FF /* NavigatorUI */,
 				D81431842E719548009FC7FF /* Factory */,
 				D81431862E719548009FC7FF /* FactoryKit */,
-				D81431882E719548009FC7FF /* FactoryTesting */,
 				D814318B2E719560009FC7FF /* NetworkKit */,
 				D814318D2E719563009FC7FF /* Models */,
 				D814318F2E719567009FC7FF /* UIComponentKit */,
@@ -162,6 +158,7 @@
 				D881CD732E729DF60067499B /* ProductListKitLive */,
 				D881CD752E729DF60067499B /* ProductListUI */,
 				D881CD912E72BA6B0067499B /* ProductListFeature */,
+				D81CB64B2E75A3F700757F1A /* NavigatorUI */,
 			);
 			productName = SupernovaX;
 			productReference = D8A1865A2E718C2500483B15 /* SupernovaX.app */;
@@ -192,8 +189,8 @@
 			mainGroup = D8A186512E718C2500483B15;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				D814313F2E718F56009FC7FF /* XCRemoteSwiftPackageReference "Navigator" */,
 				D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */,
+				D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D8A1865B2E718C2500483B15 /* Products */;
@@ -439,14 +436,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D814313F2E718F56009FC7FF /* XCRemoteSwiftPackageReference "Navigator" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Navigator";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
-			};
-		};
 		D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Factory";
@@ -455,14 +444,17 @@
 				minimumVersion = 2.5.3;
 			};
 		};
+		D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Navigator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D81431402E718F56009FC7FF /* NavigatorUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D814313F2E718F56009FC7FF /* XCRemoteSwiftPackageReference "Navigator" */;
-			productName = NavigatorUI;
-		};
 		D81431842E719548009FC7FF /* Factory */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
@@ -472,11 +464,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = FactoryKit;
-		};
-		D81431882E719548009FC7FF /* FactoryTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = FactoryTesting;
 		};
 		D814318B2E719560009FC7FF /* NetworkKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -501,6 +488,11 @@
 		D81431CB2E7198EC009FC7FF /* FavoriteKitLive */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteKitLive;
+		};
+		D81CB64B2E75A3F700757F1A /* NavigatorUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */;
+			productName = NavigatorUI;
 		};
 		D881CD712E729DF60067499B /* ProductListKit */ = {
 			isa = XCSwiftPackageProductDependency;

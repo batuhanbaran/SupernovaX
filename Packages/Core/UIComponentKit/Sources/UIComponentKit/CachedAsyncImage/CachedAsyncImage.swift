@@ -13,7 +13,6 @@ import UIKit
 import AppKit
 #endif
 
-@MainActor
 public struct CachedAsyncImage: View {
     let url: URL?
 
@@ -29,7 +28,6 @@ public struct CachedAsyncImage: View {
             case .loading:
                 ProgressView()
             case .success(let data):
-                #if canImport(UIKit)
                 if let uiImage = UIImage(data: data) {
                     Image(uiImage: uiImage)
                         .resizable()
@@ -37,15 +35,6 @@ public struct CachedAsyncImage: View {
                 } else {
                     errorView
                 }
-                #elseif canImport(AppKit)
-                if let nsImage = NSImage(data: data) {
-                    Image(nsImage: nsImage)
-                        .resizable()
-                        .scaledToFit()
-                } else {
-                    errorView
-                }
-                #endif
             case .failure:
                 errorView
             }
@@ -63,30 +52,21 @@ public struct CachedAsyncImage: View {
     }
 
     private func loadImage() async {
-        guard let url = url else {
-            imageState = .failure(.invalidURL)
-            return
-        }
-
-        imageState = .loading
-
-        do {
-            let data = try await ImageCache.shared.loadImage(from: url)
-            imageState = .success(data)
-        } catch {
-            imageState = .failure(.networkError(error))
-        }
+        guard let url,
+              let imageState = try? await ImageCache.shared.loadImage(from: url)
+        else { return }
+        self.imageState = imageState
     }
 }
 
 // MARK: - ImageState Enum
-private enum ImageState {
+enum ImageState {
     case loading
     case success(Data)
     case failure(ImageError)
 }
 
-private enum ImageError: Error {
+enum ImageError: Error {
     case invalidURL
     case networkError(Error)
 }
@@ -106,17 +86,17 @@ actor ImageCache {
         self.maxAge = maxAge
     }
 
-    func loadImage(from url: URL) async throws -> Data {
+    func loadImage(from url: URL) async throws -> ImageState {
         let key = url.absoluteString
 
         // Check if there's an ongoing request for this URL
         if let ongoingTask = ongoingRequests[key] {
-            return try await ongoingTask.value
+            return try await .success(ongoingTask.value)
         }
 
         // Check cache first
         if let cachedData = getCachedData(for: key) {
-            return cachedData
+            return .success(cachedData)
         }
 
         // Create new request task
@@ -146,7 +126,7 @@ actor ImageCache {
         do {
             let data = try await task.value
             ongoingRequests.removeValue(forKey: key)
-            return data
+            return .success(data)
         } catch {
             ongoingRequests.removeValue(forKey: key)
             throw error

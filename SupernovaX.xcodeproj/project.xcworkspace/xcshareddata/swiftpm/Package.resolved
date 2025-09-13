@@ -1,5 +1,5 @@
 {
-  "originHash" : "83ed0b5a89aaf63766bb91a4daba344629b5f7d9c0b1ba37bc2a6cd67bc3b31c",
+  "originHash" : "d77a6fb134fee188da13bd427c91280aef5f9cfc6a4ab7dd81483bc67361f620",
   "pins" : [
     {
       "identity" : "factory",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hmlongco/Navigator.git",
       "state" : {
-        "revision" : "d0c13d7efd9e97e63d901bc53ba22d20da135557",
-        "version" : "1.0.0"
+        "revision" : "31399c4cfc1b9c63ed260369176a01d327f8fa0f",
+        "version" : "1.2.0"
       }
     }
   ],

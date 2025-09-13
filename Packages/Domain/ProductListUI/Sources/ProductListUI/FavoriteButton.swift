@@ -5,7 +5,7 @@
 //  Created by Batuhan Baran on 11.09.2025.
 //
 
-import FavoriteKit
+import FavoriteKitLive
 import SwiftUI
 
 // MARK: - Favorite Button
@@ -14,7 +14,7 @@ public struct FavoriteButton: View {
 
     @State private var isFavorite: Bool = false
     @State private var pressed = false
-    @Environment(FavoriteManager.self) private var favoriteManager
+    @Environment(FavoriteManagerLive.self) private var favoriteManager
 
     public init(id: String) {
         self.id = id

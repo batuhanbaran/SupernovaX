@@ -22,10 +22,6 @@ struct SupernovaXApp: App {
 
 struct ApplicationRootView: View {
 
-    @StateObject private var favoriteManager = FavoriteManager(
-        storage: FavoriteStorageLive.shared
-    )
-
     init() {
         autoRegister()
     }
@@ -46,7 +42,7 @@ struct ApplicationRootView: View {
     func applicationView() -> some View {
         RootTabView()
             .environment(\.navigator, applicationNavigator())
-            .environment(favoriteManager)
+            .environment(\.favoriteManager, FavoriteManagerFactory.makeDefault())
     }
 
     func autoRegister() {

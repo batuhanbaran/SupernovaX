@@ -7,6 +7,7 @@
 
 import Models
 import SwiftUI
+import UIComponentKit
 
 // MARK: - Product Card Component
 public struct ProductCard: View {
@@ -24,10 +25,9 @@ public struct ProductCard: View {
         VStack(alignment: .leading, spacing: 0) {
             // Image (1:1)
             ZStack(alignment: .topTrailing) {
-                ProductImageView(
-                    imageURL: product.thumbnail,
-                    imageLoadFailed: $imageLoadFailed
-                )
+                if let url = product.thumbnail {
+                    CachedAsyncImage(url: .init(string: url))
+                }
 
                 HStack {
                     FavoriteButton(id: String(product.id ?? .zero))

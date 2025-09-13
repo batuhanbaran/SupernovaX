@@ -5,13 +5,13 @@
 //  Created by Batuhan BARAN on 13.06.2025.
 //
 
-import FavoriteKit
+import FavoriteKitLive
 import NavigatorUI
 import SwiftUI
 
 struct RootTabView : View {
     @SceneStorage("selectedTab") var selectedTab: RootTabs = .home
-    @Environment(FavoriteManager.self) private var favoriteManager
+    @Environment(FavoriteManagerLive.self) private var favoriteManager
 
     var body: some View {
         TabView(selection: $selectedTab) {

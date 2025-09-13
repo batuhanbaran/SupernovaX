@@ -7,22 +7,23 @@
 
 import SwiftUI
 import Factory
-import FavoriteKit
+import FavoriteKitLive
 import ProductListFeature
 
 struct HomeView: View {
-    @Environment(FavoriteManager.self) private var favoriteManager
+    @Environment(FavoriteManagerLive.self) private var favoriteManager
 
     var body: some View {
         NavigationView {
             ProductListView()
             .navigationTitle("Products")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 struct FavoritesView: View {
-    @Environment(FavoriteManager.self) private var favoriteManager
+    @Environment(FavoriteManagerLive.self) private var favoriteManager
 
     var body: some View {
         NavigationView {
