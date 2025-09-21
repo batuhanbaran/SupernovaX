@@ -19,6 +19,8 @@ public final class FavoriteManagerLive: FavoriteManager {
 
     private let storage: any FavoriteStorage
 
+    public var isAuthendicated: Bool = false
+
     public init(storage: any FavoriteStorage = FavoriteStorageLive.shared) {
         self.storage = storage
         Task {

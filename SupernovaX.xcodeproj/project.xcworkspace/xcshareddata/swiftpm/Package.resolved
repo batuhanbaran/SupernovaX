@@ -1,5 +1,5 @@
 {
-  "originHash" : "d77a6fb134fee188da13bd427c91280aef5f9cfc6a4ab7dd81483bc67361f620",
+  "originHash" : "305bbd354954c0c807e491eb47e4b19bd5bc98373332c2a444737563bbebf2c0",
   "pins" : [
     {
       "identity" : "factory",
@@ -15,8 +15,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hmlongco/Navigator.git",
       "state" : {
-        "revision" : "31399c4cfc1b9c63ed260369176a01d327f8fa0f",
-        "version" : "1.2.0"
+        "revision" : "d0c13d7efd9e97e63d901bc53ba22d20da135557",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "todox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/batuhanbaran/TodoX",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1ac92dd3594d0af5af7140cc1b4bae687e7aad2c"
       }
     }
   ],

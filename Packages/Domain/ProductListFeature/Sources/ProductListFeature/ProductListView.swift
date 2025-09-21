@@ -5,8 +5,10 @@
 //  Created by Batuhan Baran on 11.09.2025.
 //
 
+import ExtensionsKit
 import Factory
 import Models
+import NavigatorUI
 import ProductListUI
 import ProductListKitLive
 import SwiftUI
@@ -31,6 +33,7 @@ final class ProductListViewModel {
 
 public struct ProductListView: View {
     @State private var viewModel = ProductListViewModel()
+    @Environment(\.navigator) private var navigator
 
     public init() {}
 
@@ -44,10 +47,22 @@ public struct ProductListView: View {
             total: $vm.total,
             layout: .grid(columns: 2, spacing: 8)
         ) { product in
-            ProductCard(product: product)
+            ProductCard(
+                product: product,
+                onTap: {
+                    // For now, just print until we implement product detail navigation
+                    print("Navigate to product: \(product.id ?? .zero)")
+                },
+                onCartTap: {
+                    // For now, just print until we implement cart navigation
+                    print("Add to cart: \(product.id ?? .zero)")
+                }
+            )
         }
-        .task {
-            await vm.fetchProductList()
+        .onFirstAppear {
+            Task {
+                await vm.fetchProductList()
+            }
         }
         .padding(8)
     }

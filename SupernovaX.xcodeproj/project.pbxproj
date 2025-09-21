@@ -15,11 +15,14 @@
 		D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431912E71956B009FC7FF /* ExtensionsKit */; };
 		D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431B02E719839009FC7FF /* FavoriteKit */; };
 		D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81431CB2E7198EC009FC7FF /* FavoriteKitLive */; };
+		D8186F692E8063760048E4A6 /* TodoX in Frameworks */ = {isa = PBXBuildFile; productRef = D8186F682E8063760048E4A6 /* TodoX */; };
 		D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */ = {isa = PBXBuildFile; productRef = D81CB64B2E75A3F700757F1A /* NavigatorUI */; };
 		D881CD722E729DF60067499B /* ProductListKit in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD712E729DF60067499B /* ProductListKit */; };
 		D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD732E729DF60067499B /* ProductListKitLive */; };
 		D881CD762E729DF60067499B /* ProductListUI in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD752E729DF60067499B /* ProductListUI */; };
 		D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD912E72BA6B0067499B /* ProductListFeature */; };
+		D88F7B5D2E78307400DA406C /* CartKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D88F7B5C2E78307400DA406C /* CartKitLive */; };
+		D88F7B5F2E78307800DA406C /* CartKit in Frameworks */ = {isa = PBXBuildFile; productRef = D88F7B5E2E78307800DA406C /* CartKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,8 @@
 		D881CD6E2E729DDD0067499B /* ProductListKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKitLive; sourceTree = "<group>"; };
 		D881CD6F2E729DDD0067499B /* ProductListUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListUI; sourceTree = "<group>"; };
 		D881CD862E72A4CA0067499B /* ProductListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListFeature; sourceTree = "<group>"; };
+		D88F7B4B2E782EA000DA406C /* CartKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CartKit; sourceTree = "<group>"; };
+		D88F7B4C2E782EA000DA406C /* CartKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CartKitLive; sourceTree = "<group>"; };
 		D8A1865A2E718C2500483B15 /* SupernovaX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupernovaX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A1866B2E718E0200483B15 /* ExtensionsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ExtensionsKit; sourceTree = "<group>"; };
 		D8A1866C2E718E0200483B15 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
@@ -49,9 +54,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88F7B5F2E78307800DA406C /* CartKit in Frameworks */,
 				D814318E2E719563009FC7FF /* Models in Frameworks */,
 				D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */,
+				D8186F692E8063760048E4A6 /* TodoX in Frameworks */,
 				D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */,
+				D88F7B5D2E78307400DA406C /* CartKitLive in Frameworks */,
 				D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */,
 				D881CD762E729DF60067499B /* ProductListUI in Frameworks */,
 				D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */,
@@ -107,6 +115,8 @@
 		D8A1866F2E718E0200483B15 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D88F7B4B2E782EA000DA406C /* CartKit */,
+				D88F7B4C2E782EA000DA406C /* CartKitLive */,
 				D81431CA2E7198E3009FC7FF /* FavoriteKitLive */,
 				D81431AF2E719830009FC7FF /* FavoriteKit */,
 				D8A1866B2E718E0200483B15 /* ExtensionsKit */,
@@ -159,6 +169,9 @@
 				D881CD752E729DF60067499B /* ProductListUI */,
 				D881CD912E72BA6B0067499B /* ProductListFeature */,
 				D81CB64B2E75A3F700757F1A /* NavigatorUI */,
+				D88F7B5C2E78307400DA406C /* CartKitLive */,
+				D88F7B5E2E78307800DA406C /* CartKit */,
+				D8186F682E8063760048E4A6 /* TodoX */,
 			);
 			productName = SupernovaX;
 			productReference = D8A1865A2E718C2500483B15 /* SupernovaX.app */;
@@ -191,6 +204,7 @@
 			packageReferences = (
 				D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */,
 				D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */,
+				D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D8A1865B2E718C2500483B15 /* Products */;
@@ -444,12 +458,20 @@
 				minimumVersion = 2.5.3;
 			};
 		};
+		D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/batuhanbaran/TodoX";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Navigator";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -489,6 +511,11 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteKitLive;
 		};
+		D8186F682E8063760048E4A6 /* TodoX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */;
+			productName = TodoX;
+		};
 		D81CB64B2E75A3F700757F1A /* NavigatorUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */;
@@ -509,6 +536,14 @@
 		D881CD912E72BA6B0067499B /* ProductListFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProductListFeature;
+		};
+		D88F7B5C2E78307400DA406C /* CartKitLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CartKitLive;
+		};
+		D88F7B5E2E78307800DA406C /* CartKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CartKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

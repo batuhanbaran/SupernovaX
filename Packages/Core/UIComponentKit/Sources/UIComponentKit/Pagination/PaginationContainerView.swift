@@ -1,6 +1,6 @@
 //
 //  PaginationContainerView.swift
-//  DummyUser
+//  SupernovaX
 //
 //  Created by Batuhan BARAN on 4.06.2025.
 //

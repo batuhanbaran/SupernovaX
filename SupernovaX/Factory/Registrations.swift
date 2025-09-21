@@ -1,6 +1,6 @@
 //
 //  Registrations.swift
-//  DummyUser
+//  SupernovaX
 //
 //  Created by Batuhan BARAN on 2.06.2025.
 //

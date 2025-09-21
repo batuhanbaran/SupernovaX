@@ -1,6 +1,6 @@
 //
 //  RootTabView.swift
-//  DummyUser
+//  SupernovaX
 //
 //  Created by Batuhan BARAN on 13.06.2025.
 //
@@ -16,16 +16,28 @@ struct RootTabView : View {
     var body: some View {
         TabView(selection: $selectedTab) {
             ForEach(RootTabs.tabs) { tab in
-                tab
-                    .badge(tab == .favorites ? favoriteManager.badge : .zero)
-                    .tabItem { Label(tab.title, systemImage: tab.image) }
-                    .tag(tab)
+                ManagedNavigationStack(scene: tab.sceneId) {
+                    tab
+                        .navigationDestination(for: SuperAppDestination.self) { destination in
+                            destination
+                        }
+                }
+                .badge(tab == .favorites ? favoriteManager.badge : .zero)
+                .tabItem { Label(tab.title, systemImage: tab.image) }
+                .tag(tab)
             }
+        }
+        .onNavigationReceive { (tab: RootTabs) in
+            if tab == selectedTab {
+                return .immediately
+            }
+            selectedTab = tab
+            return .auto
         }
      }
 }
 
-enum RootTabs: Int, Codable {
+public enum RootTabs: Int, Codable {
     case home
     case favorites
     case settings
@@ -41,7 +53,7 @@ extension RootTabs: Identifiable {
         [.home, .favorites, .settings]
     }
 
-    var id: String {
+    public var id: String {
         "\(self)"
     }
 
@@ -66,25 +78,42 @@ extension RootTabs: Identifiable {
             "gear"
         }
     }
+    
+    var sceneId: String {
+        switch self {
+        case .home:
+            "home"
+        case .favorites:
+            "favorites"
+        case .settings:
+            "settings"
+        }
+    }
 }
 
 extension RootTabs: NavigationDestination {
-    var body: some View {
+    public var body: some View {
         RootTabsViewBuilder(destination: self)
     }
 }
 
-private struct RootTabsViewBuilder: View {
-    let destination: RootTabs
+public struct RootTabsViewBuilder: View {
+    public let destination: RootTabs
+    
+    public init(destination: RootTabs) {
+        self.destination = destination
+    }
 
-    var body: some View {
+    public var body: some View {
         switch destination {
         case .home:
             HomeView()
+                .navigationAutoReceive(SuperAppDestination.self)
         case .favorites:
             FavoritesView()
         case .settings:
             Text("Settings")
+                .navigationTitle("Settings")
         }
     }
 }

@@ -9,16 +9,27 @@ import SwiftUI
 import Factory
 import FavoriteKitLive
 import ProductListFeature
+import NavigatorUI
 
 struct HomeView: View {
     @Environment(FavoriteManagerLive.self) private var favoriteManager
+    @Environment(\.navigator) private var navigator
 
     var body: some View {
-        NavigationView {
-            ProductListView()
+        ProductListView()
             .navigationTitle("Products")
             .navigationBarTitleDisplayMode(.inline)
-        }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        navigator.openSuperAppSheet()
+                    }) {
+                        Image(systemName: "apps.iphone")
+                            .font(.system(size: 18, weight: .medium))
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
     }
 }
 
@@ -26,18 +37,18 @@ struct FavoritesView: View {
     @Environment(FavoriteManagerLive.self) private var favoriteManager
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(favoriteManager.favorites) { favorite in
-                    Text(favorite.id)
-                }
-                .onDelete { indexSet in
-                    Task {
-                        await favoriteManager.remove(at: indexSet)
-                    }
+        List {
+            ForEach(favoriteManager.favorites) { favorite in
+                Text(favorite.id)
+            }
+            .onDelete { indexSet in
+                Task {
+                    await favoriteManager.remove(at: indexSet)
                 }
             }
-            .navigationTitle("Favorites (\(favoriteManager.badge))")
         }
+        .navigationTitle("Favorites (\(favoriteManager.badge))")
     }
 }
+
+

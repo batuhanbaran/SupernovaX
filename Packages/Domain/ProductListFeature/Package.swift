@@ -13,16 +13,24 @@ let package = Package(
             targets: ["ProductListFeature"]),
     ],
     dependencies: [
-        .package(path: "../Models"),
+        .package(path: "../../Core/Models"),
         .package(path: "../ProductListUI"),
-        .package(path: "../ProductListKitLive")
+        .package(path: "../ProductListKitLive"),
+        .package(path: "../../Core/ExtensionsKit"),
+        .package(url: "https://github.com/hmlongco/Navigator", exact: "1.0.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "ProductListFeature",
-            dependencies: ["Models", "ProductListUI", "ProductListKitLive"]
+            dependencies: [
+                "Models", 
+                "ProductListUI", 
+                "ProductListKitLive",
+                "ExtensionsKit",
+                .product(name: "NavigatorUI", package: "Navigator")
+            ]
         )
     ]
 )

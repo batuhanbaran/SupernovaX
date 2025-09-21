@@ -22,6 +22,8 @@ struct SupernovaXApp: App {
 
 struct ApplicationRootView: View {
 
+    @State private var favoriteManager = FavoriteManagerLive()
+
     init() {
         autoRegister()
     }
@@ -42,10 +44,31 @@ struct ApplicationRootView: View {
     func applicationView() -> some View {
         RootTabView()
             .environment(\.navigator, applicationNavigator())
-            .environment(\.favoriteManager, FavoriteManagerFactory.makeDefault())
+            .environment(favoriteManager)
     }
 
     func autoRegister() {
         Container.shared.autoRegister()
+    }
+}
+
+// MARK: - Navigation Extensions
+extension Navigator {
+    /// Navigate to a specific tab using Navigator's send pattern
+    @MainActor
+    func navigateToTab(_ tab: RootTabs) {
+        send(tab)
+    }
+    
+    /// Navigate to a specific tab with a destination
+    @MainActor
+    func navigateToTab(_ tab: RootTabs, destination: SuperAppDestination) {
+        send(tab, destination)
+    }
+    
+    /// Open SuperApp sheet
+    @MainActor
+    func openSuperAppSheet() {
+        navigate(to: SuperAppDestination.superAppSheet)
     }
 }
