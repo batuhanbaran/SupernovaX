@@ -8,6 +8,7 @@
 import Models
 import SwiftUI
 import UIComponentKit
+import ProductListKit
 
 // MARK: - Product Card Component
 public struct ProductCard: View {

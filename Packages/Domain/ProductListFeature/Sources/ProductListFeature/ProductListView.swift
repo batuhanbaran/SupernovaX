@@ -11,6 +11,7 @@ import Models
 import NavigatorUI
 import ProductListUI
 import ProductListKitLive
+import ProductListKit
 import SwiftUI
 import UIComponentKit
 
@@ -52,6 +53,7 @@ public struct ProductListView: View {
                 onTap: {
                     // For now, just print until we implement product detail navigation
                     print("Navigate to product: \(product.id ?? .zero)")
+                    navigator.push(ProductListDestination.productDetail(product.id ?? .zero))
                 },
                 onCartTap: {
                     // For now, just print until we implement cart navigation
@@ -65,5 +67,28 @@ public struct ProductListView: View {
             }
         }
         .padding(8)
+        .navigationDestination(for: ProductListDestination.self) { destination in
+            destination
+        }
+    }
+}
+
+// MARK: - SuperApp Navigation Destinations
+/// Navigation destinations for SuperApp level (between different mini-apps)
+public enum ProductListDestination: NavigationDestination {
+    case productDetail(Int)
+
+    public var body: some View {
+        switch self {
+        case .productDetail(let id):
+            Text("Product \(id)")
+        }
+    }
+
+    public var method: NavigationMethod {
+        switch self {
+        case .productDetail(_):
+                .push
+        }
     }
 }

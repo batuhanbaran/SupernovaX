@@ -12,13 +12,11 @@ import ProductListFeature
 import NavigatorUI
 
 struct HomeView: View {
-    @Environment(FavoriteManagerLive.self) private var favoriteManager
     @Environment(\.navigator) private var navigator
 
     var body: some View {
         ProductListView()
             .navigationTitle("Products")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {

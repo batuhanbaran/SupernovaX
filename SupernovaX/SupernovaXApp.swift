@@ -8,6 +8,7 @@
 import Factory
 import FavoriteKit
 import FavoriteKitLive
+import NetworkRegistration
 import NavigatorUI
 import SwiftUI
 

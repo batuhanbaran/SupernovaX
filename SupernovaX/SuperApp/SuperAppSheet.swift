@@ -40,7 +40,7 @@ struct SuperAppSheet: View {
                 Color.clear.frame(height: 40)
             }
             .background(Color(.systemGroupedBackground))
-            .presentationDetents([.height(intrinsicHeight), .large])
+            .presentationDetents([.height(intrinsicHeight)])
             .presentationDragIndicator(.visible)
             .presentationContentInteraction(.scrolls)
             .toolbar {

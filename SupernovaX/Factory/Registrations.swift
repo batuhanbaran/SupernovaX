@@ -7,11 +7,11 @@
 
 import Factory
 import Foundation
-import NetworkKit
+import NetworkRegistration
 
 extension Container: @retroactive AutoRegistering {
 
     public func autoRegister() {
-
+        NetworkRegistrations.register()
     }
 }

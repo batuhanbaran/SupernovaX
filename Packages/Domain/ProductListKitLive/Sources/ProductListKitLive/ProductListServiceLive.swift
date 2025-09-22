@@ -10,6 +10,7 @@ import Foundation
 import Models
 import NetworkKit
 import UIComponentKit
+import ProductListKit
 
 struct ProductListEndpoint: Endpoint {
     var path: String

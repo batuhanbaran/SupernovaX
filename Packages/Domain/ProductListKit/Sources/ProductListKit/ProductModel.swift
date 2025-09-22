@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Models
 
 // MARK: - Product
 public struct ProductModel: StandardModel {

@@ -16,6 +16,7 @@
 		D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431B02E719839009FC7FF /* FavoriteKit */; };
 		D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81431CB2E7198EC009FC7FF /* FavoriteKitLive */; };
 		D8186F692E8063760048E4A6 /* TodoX in Frameworks */ = {isa = PBXBuildFile; productRef = D8186F682E8063760048E4A6 /* TodoX */; };
+		D81870822E815D820048E4A6 /* NetworkRegistration in Frameworks */ = {isa = PBXBuildFile; productRef = D81870812E815D820048E4A6 /* NetworkRegistration */; };
 		D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */ = {isa = PBXBuildFile; productRef = D81CB64B2E75A3F700757F1A /* NavigatorUI */; };
 		D881CD722E729DF60067499B /* ProductListKit in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD712E729DF60067499B /* ProductListKit */; };
 		D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD732E729DF60067499B /* ProductListKitLive */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		D81431AF2E719830009FC7FF /* FavoriteKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKit; sourceTree = "<group>"; };
 		D81431CA2E7198E3009FC7FF /* FavoriteKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKitLive; sourceTree = "<group>"; };
+		D81870802E815D5F0048E4A6 /* NetworkRegistration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkRegistration; sourceTree = "<group>"; };
 		D881CD6D2E729DDD0067499B /* ProductListKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKit; sourceTree = "<group>"; };
 		D881CD6E2E729DDD0067499B /* ProductListKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKitLive; sourceTree = "<group>"; };
 		D881CD6F2E729DDD0067499B /* ProductListUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListUI; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81870822E815D820048E4A6 /* NetworkRegistration in Frameworks */,
 				D88F7B5F2E78307800DA406C /* CartKit in Frameworks */,
 				D814318E2E719563009FC7FF /* Models in Frameworks */,
 				D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */,
@@ -115,6 +118,7 @@
 		D8A1866F2E718E0200483B15 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D81870802E815D5F0048E4A6 /* NetworkRegistration */,
 				D88F7B4B2E782EA000DA406C /* CartKit */,
 				D88F7B4C2E782EA000DA406C /* CartKitLive */,
 				D81431CA2E7198E3009FC7FF /* FavoriteKitLive */,
@@ -172,6 +176,7 @@
 				D88F7B5C2E78307400DA406C /* CartKitLive */,
 				D88F7B5E2E78307800DA406C /* CartKit */,
 				D8186F682E8063760048E4A6 /* TodoX */,
+				D81870812E815D820048E4A6 /* NetworkRegistration */,
 			);
 			productName = SupernovaX;
 			productReference = D8A1865A2E718C2500483B15 /* SupernovaX.app */;
@@ -462,8 +467,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/batuhanbaran/TodoX";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
 			};
 		};
 		D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */ = {
@@ -515,6 +520,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */;
 			productName = TodoX;
+		};
+		D81870812E815D820048E4A6 /* NetworkRegistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkRegistration;
 		};
 		D81CB64B2E75A3F700757F1A /* NavigatorUI */ = {
 			isa = XCSwiftPackageProductDependency;

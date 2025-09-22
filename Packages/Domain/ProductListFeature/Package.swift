@@ -16,6 +16,7 @@ let package = Package(
         .package(path: "../../Core/Models"),
         .package(path: "../ProductListUI"),
         .package(path: "../ProductListKitLive"),
+        .package(path: "../ProductListKit"),
         .package(path: "../../Core/ExtensionsKit"),
         .package(url: "https://github.com/hmlongco/Navigator", exact: "1.0.0")
     ],
@@ -28,6 +29,7 @@ let package = Package(
                 "Models", 
                 "ProductListUI", 
                 "ProductListKitLive",
+                "ProductListKit",
                 "ExtensionsKit",
                 .product(name: "NavigatorUI", package: "Navigator")
             ]

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Models
 
 public struct ProductListResponse: PaginatedResponse {
     public let products: [ProductModel]
