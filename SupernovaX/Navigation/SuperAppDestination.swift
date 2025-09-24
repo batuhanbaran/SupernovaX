@@ -7,6 +7,7 @@
 
 import SwiftUI
 import NavigatorUI
+import TodoX
 
 // MARK: - SuperApp Navigation Destinations
 /// Navigation destinations for SuperApp level (between different mini-apps)
@@ -19,7 +20,7 @@ public enum SuperAppDestination: NavigationDestination {
         case .superAppSheet:
             SuperAppSheet()
         case .todoX:
-            TodoXNavigationView()
+            TodoXTabView()
         }
     }
     

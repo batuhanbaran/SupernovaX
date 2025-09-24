@@ -111,7 +111,7 @@ struct SuperAppSheet: View {
     private func handleAppSelection(_ app: SuperApp) {
         switch app.name {
         case "TodoX":
-            navigator.navigate(to: SuperAppDestination.todoX)
+            navigator.navigateTodoX()
         default:
             navigator.dismiss()
         }

@@ -48,5 +48,3 @@ struct FavoritesView: View {
         .navigationTitle("Favorites (\(favoriteManager.badge))")
     }
 }
-
-

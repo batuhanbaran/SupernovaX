@@ -1,5 +1,5 @@
 {
-  "originHash" : "4609c8f81b7dcd1b253bbaeb616541603fa20968e1c23dc855ea3654961caf5c",
+  "originHash" : "f15f15d2543d88908a157c6e6529e43d9939e48d2569539688e3a546317e97bd",
   "pins" : [
     {
       "identity" : "factory",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/batuhanbaran/TodoX",
       "state" : {
-        "revision" : "1ac92dd3594d0af5af7140cc1b4bae687e7aad2c",
-        "version" : "1.0.2"
+        "revision" : "e43211da677051bf3a0307fea83695a543e4b373",
+        "version" : "1.0.6"
       }
     }
   ],

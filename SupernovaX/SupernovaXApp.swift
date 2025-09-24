@@ -72,4 +72,9 @@ extension Navigator {
     func openSuperAppSheet() {
         navigate(to: SuperAppDestination.superAppSheet)
     }
+
+    @MainActor
+    func navigateTodoX() {
+        navigate(to: SuperAppDestination.todoX)
+    }
 }

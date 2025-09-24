@@ -73,8 +73,6 @@ public struct ProductListView: View {
     }
 }
 
-// MARK: - SuperApp Navigation Destinations
-/// Navigation destinations for SuperApp level (between different mini-apps)
 public enum ProductListDestination: NavigationDestination {
     case productDetail(Int)
 
