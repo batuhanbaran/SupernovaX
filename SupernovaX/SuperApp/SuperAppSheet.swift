@@ -28,28 +28,25 @@ struct SuperAppSheet: View {
     ]
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                // Header
-                headerSection
-                
-                // Apps Grid
-                appsGridSection
-                
-                // Bottom padding for natural spacing
-                Color.clear.frame(height: 40)
-            }
-            .background(Color(.systemGroupedBackground))
-            .presentationDetents([.height(intrinsicHeight)])
-            .presentationDragIndicator(.visible)
-            .presentationContentInteraction(.scrolls)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Close") {
-                        navigator.dismiss()
-                    }
-                    .foregroundColor(.blue)
+        VStack(spacing: 0) {
+            // Header
+            headerSection
+            
+            // Apps Grid
+            appsGridSection
+
+            // Bottom padding for natural spacing
+            Color.clear.frame(height: 40)
+        }
+        .presentationDetents([.height(intrinsicHeight)])
+        .presentationDragIndicator(.visible)
+        .presentationContentInteraction(.scrolls)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Close") {
+                    navigator.dismiss()
                 }
+                .foregroundColor(.blue)
             }
         }
     }
@@ -111,7 +108,7 @@ struct SuperAppSheet: View {
     private func handleAppSelection(_ app: SuperApp) {
         switch app.name {
         case "TodoX":
-            navigator.navigateTodoX()
+            navigator.navigate(to: SuperAppDestination.todoX)
         default:
             navigator.dismiss()
         }

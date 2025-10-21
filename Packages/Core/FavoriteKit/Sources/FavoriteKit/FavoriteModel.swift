@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct FavoriteModel: Sendable, Identifiable, Hashable {
+public struct FavoriteModel: Sendable, Identifiable, Hashable, Codable {
     public let id: String
 
     public init(id: String) {

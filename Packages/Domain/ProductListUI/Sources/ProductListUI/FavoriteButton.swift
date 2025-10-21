@@ -5,33 +5,33 @@
 //  Created by Batuhan Baran on 11.09.2025.
 //
 
-import FavoriteKitLive
 import SwiftUI
 
 // MARK: - Favorite Button
 public struct FavoriteButton: View {
     private let id: String
+    private let onToggle: () -> Void
 
-    @State private var isFavorite: Bool = false
+    @Binding private var isFavorite: Bool
     @State private var pressed = false
-    @Environment(FavoriteManagerLive.self) private var favoriteManager
 
-    public init(id: String) {
+    public init(
+        isFavorite: Binding<Bool>,
+        id: String,
+        onToggle: @escaping () -> Void = {}
+    ) {
+        self._isFavorite = isFavorite
         self.id = id
+        self.onToggle = onToggle
     }
 
     public var body: some View {
         Button {
             pressed = true
-
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                 pressed = false
             }
-            isFavorite.toggle()
-
-            Task {
-                await favoriteManager.toggle(.init(id: id))
-            }
+            onToggle()
         } label: {
             Image(systemName: isFavorite ? "heart.fill" : "heart")
                 .font(.system(size: 16, weight: .semibold))
@@ -44,8 +44,5 @@ public struct FavoriteButton: View {
         .scaleEffect(pressed ? 0.9 : 1.0)
         .animation(.spring(response: 0.25, dampingFraction: 0.7), value: pressed)
         .accessibilityLabel(isFavorite ? "Remove from favorites" : "Add to favorites")
-        .task {
-            isFavorite = await favoriteManager.isFavorite(.init(id: id))
-        }
     }
 }

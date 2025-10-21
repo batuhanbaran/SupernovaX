@@ -5,28 +5,46 @@
 //  Created by Batuhan BARAN on 13.06.2025.
 //
 
+import AppDestinationKit
+import AuthenticationKit
+import AuthenticationFeature
 import FavoriteKitLive
 import NavigatorUI
+import ProductDetailFeatureLive
+import ProductListFeatureLive
 import SwiftUI
 
-struct RootTabView : View {
+struct RootTabView: View {
+    let navigator: Navigator = .init(configuration: .init())
+
+    @State var favoriteManager: FavoriteManagerLive = .init()
     @SceneStorage("selectedTab") var selectedTab: RootTabs = .home
-    @Environment(FavoriteManagerLive.self) private var favoriteManager
 
     var body: some View {
-        TabView(selection: $selectedTab) {
-            ForEach(RootTabs.tabs) { tab in
-                ManagedNavigationStack(scene: tab.sceneId) {
-                    tab
-                        .navigationDestination(for: SuperAppDestination.self) { destination in
-                            destination
+        Group {
+            if #available(iOS 18.0, *) {
+                TabView(selection: $selectedTab) {
+                    ForEach(RootTabs.tabs) { tab in
+                        Tab(tab.title, systemImage: tab.image, value: tab) {
+                            tabContent(for: tab)
                         }
+                        .badge(tab == .favorites ? favoriteManager.badge : .zero)
+                    }
                 }
-                .badge(tab == .favorites ? favoriteManager.badge : .zero)
-                .tabItem { Label(tab.title, systemImage: tab.image) }
-                .tag(tab)
+            } else {
+                TabView(selection: $selectedTab) {
+                    ForEach(RootTabs.tabs) { tab in
+                        tabContent(for: tab)
+                            .tabItem {
+                                Label(tab.title, systemImage: tab.image)
+                            }
+                            .tag(tab)
+                            .badge(tab == .favorites ? favoriteManager.badge : .zero)
+                    }
+                }
             }
         }
+        .environment(favoriteManager)
         .onNavigationReceive { (tab: RootTabs) in
             if tab == selectedTab {
                 return .immediately
@@ -34,23 +52,44 @@ struct RootTabView : View {
             selectedTab = tab
             return .auto
         }
-     }
+        .onNavigationProvidedView(AppDestinations.self) { destination in
+            switch destination {
+            case .productList:
+                ProductListView()
+            case .productDetail(let productId):
+                ProductDetailView(productId: productId)
+            case .authentication:
+                AuthenticationDestinationView()
+            }
+        }
+        .onNavigationReceive(assign: $selectedTab)
+        .navigationRoot(navigator)
+    }
+
+    @ViewBuilder
+    private func tabContent(for tab: RootTabs) -> some View {
+        ManagedNavigationStack {
+            tab
+        }
+        .ignoresSafeArea(.keyboard, edges: .bottom)
+    }
 }
 
 public enum RootTabs: Int, Codable {
     case home
     case favorites
     case settings
+    case account
 }
 
 extension RootTabs: Identifiable {
 
     static var tabs: [RootTabs] {
-        [.home, .favorites, .settings]
+        [.home, .favorites, .settings, .account]
     }
 
     static var sidebar: [RootTabs] {
-        [.home, .favorites, .settings]
+        [.home, .favorites, .settings, .account]
     }
 
     public var id: String {
@@ -65,6 +104,8 @@ extension RootTabs: Identifiable {
             "Favorites"
         case .settings:
             "Settings"
+        case .account:
+            "Account"
         }
     }
 
@@ -76,6 +117,8 @@ extension RootTabs: Identifiable {
             "heart"
         case .settings:
             "gear"
+        case .account:
+            "person"
         }
     }
     
@@ -87,6 +130,8 @@ extension RootTabs: Identifiable {
             "favorites"
         case .settings:
             "settings"
+        case .account:
+            "account"
         }
     }
 }
@@ -108,12 +153,12 @@ public struct RootTabsViewBuilder: View {
         switch destination {
         case .home:
             HomeView()
-                .navigationAutoReceive(SuperAppDestination.self)
         case .favorites:
             FavoritesView()
         case .settings:
-            Text("Settings")
-                .navigationTitle("Settings")
+            SettingsView()
+        case .account:
+            AccountView()
         }
     }
 }

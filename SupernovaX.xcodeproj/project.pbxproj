@@ -7,40 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D81431852E719548009FC7FF /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = D81431842E719548009FC7FF /* Factory */; };
-		D81431872E719548009FC7FF /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431862E719548009FC7FF /* FactoryKit */; };
 		D814318C2E719560009FC7FF /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = D814318B2E719560009FC7FF /* NetworkKit */; };
 		D814318E2E719563009FC7FF /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = D814318D2E719563009FC7FF /* Models */; };
 		D81431902E719567009FC7FF /* UIComponentKit in Frameworks */ = {isa = PBXBuildFile; productRef = D814318F2E719567009FC7FF /* UIComponentKit */; };
 		D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431912E71956B009FC7FF /* ExtensionsKit */; };
 		D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */ = {isa = PBXBuildFile; productRef = D81431B02E719839009FC7FF /* FavoriteKit */; };
 		D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81431CB2E7198EC009FC7FF /* FavoriteKitLive */; };
-		D8186F692E8063760048E4A6 /* TodoX in Frameworks */ = {isa = PBXBuildFile; productRef = D8186F682E8063760048E4A6 /* TodoX */; };
+		D81602372EA2B56600858C2A /* ProductListFeatureLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81602362EA2B56600858C2A /* ProductListFeatureLive */; };
+		D81602392EA2B56F00858C2A /* ProductDetailFeatureLive in Frameworks */ = {isa = PBXBuildFile; productRef = D81602382EA2B56F00858C2A /* ProductDetailFeatureLive */; };
+		D816023B2EA2B56F00858C2A /* ProductDetailKit in Frameworks */ = {isa = PBXBuildFile; productRef = D816023A2EA2B56F00858C2A /* ProductDetailKit */; };
 		D81870822E815D820048E4A6 /* NetworkRegistration in Frameworks */ = {isa = PBXBuildFile; productRef = D81870812E815D820048E4A6 /* NetworkRegistration */; };
-		D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */ = {isa = PBXBuildFile; productRef = D81CB64B2E75A3F700757F1A /* NavigatorUI */; };
+		D827DE232EA56D2E009D7466 /* TodoX in Frameworks */ = {isa = PBXBuildFile; productRef = D827DE222EA56D2E009D7466 /* TodoX */; };
+		D84150062E8D3B0B00FD93D3 /* TokenKit in Frameworks */ = {isa = PBXBuildFile; productRef = D84150052E8D3B0B00FD93D3 /* TokenKit */; };
+		D84150082E8D3B0B00FD93D3 /* TokenKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D84150072E8D3B0B00FD93D3 /* TokenKitLive */; };
+		D84957212E8E8E3E0026BFF2 /* TokenRegistration in Frameworks */ = {isa = PBXBuildFile; productRef = D84957202E8E8E3E0026BFF2 /* TokenRegistration */; };
+		D873C4862E8D188B00DA85FB /* UserKit in Frameworks */ = {isa = PBXBuildFile; productRef = D873C4852E8D188B00DA85FB /* UserKit */; };
+		D873C4882E8D188B00DA85FB /* UserKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D873C4872E8D188B00DA85FB /* UserKitLive */; };
+		D873C48A2E8D188B00DA85FB /* UserRegistration in Frameworks */ = {isa = PBXBuildFile; productRef = D873C4892E8D188B00DA85FB /* UserRegistration */; };
 		D881CD722E729DF60067499B /* ProductListKit in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD712E729DF60067499B /* ProductListKit */; };
-		D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD732E729DF60067499B /* ProductListKitLive */; };
-		D881CD762E729DF60067499B /* ProductListUI in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD752E729DF60067499B /* ProductListUI */; };
-		D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD912E72BA6B0067499B /* ProductListFeature */; };
+		D881CD732E729DF60067499D /* ProductListUI in Frameworks */ = {isa = PBXBuildFile; productRef = D881CD742E729DF60067499D /* ProductListUI */; };
 		D88F7B5D2E78307400DA406C /* CartKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D88F7B5C2E78307400DA406C /* CartKitLive */; };
 		D88F7B5F2E78307800DA406C /* CartKit in Frameworks */ = {isa = PBXBuildFile; productRef = D88F7B5E2E78307800DA406C /* CartKit */; };
+		D8AE6A0F2EA2BDA600770AFD /* ProductListKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = D8AE6A102EA2BDA600770AFD /* ProductListKitLive */; };
+		D8E4C4992E8539C1006C27E7 /* AuthenticationFeature in Frameworks */ = {isa = PBXBuildFile; productRef = D8E4C4982E8539C1006C27E7 /* AuthenticationFeature */; };
+		D8E4C49B2E8539C1006C27E7 /* AuthenticationKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8E4C49A2E8539C1006C27E7 /* AuthenticationKit */; };
+		D8E4C4D02E855706006C27E7 /* AuthenticationKitRegistration in Frameworks */ = {isa = PBXBuildFile; productRef = D8E4C4CF2E855706006C27E7 /* AuthenticationKitRegistration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D81431AF2E719830009FC7FF /* FavoriteKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKit; sourceTree = "<group>"; };
 		D81431CA2E7198E3009FC7FF /* FavoriteKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FavoriteKitLive; sourceTree = "<group>"; };
+		D81602322EA2B45100858C2A /* AppDestinationKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppDestinationKit; sourceTree = "<group>"; };
 		D81870802E815D5F0048E4A6 /* NetworkRegistration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkRegistration; sourceTree = "<group>"; };
+		D84150032E8D3AFB00FD93D3 /* TokenKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TokenKit; sourceTree = "<group>"; };
+		D84150042E8D3AFB00FD93D3 /* TokenKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TokenKitLive; sourceTree = "<group>"; };
+		D849571F2E8E8E350026BFF2 /* TokenRegistration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TokenRegistration; sourceTree = "<group>"; };
+		D873C4692E8D182B00DA85FB /* UserKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UserKit; sourceTree = "<group>"; };
+		D873C4832E8D188000DA85FB /* UserKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UserKitLive; sourceTree = "<group>"; };
+		D873C4842E8D188000DA85FB /* UserRegistration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UserRegistration; sourceTree = "<group>"; };
 		D881CD6D2E729DDD0067499B /* ProductListKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKit; sourceTree = "<group>"; };
-		D881CD6E2E729DDD0067499B /* ProductListKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKitLive; sourceTree = "<group>"; };
-		D881CD6F2E729DDD0067499B /* ProductListUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListUI; sourceTree = "<group>"; };
-		D881CD862E72A4CA0067499B /* ProductListFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListFeature; sourceTree = "<group>"; };
+		D881CD6E2E729DDD0067499C /* ProductListUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListUI; sourceTree = "<group>"; };
 		D88F7B4B2E782EA000DA406C /* CartKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CartKit; sourceTree = "<group>"; };
 		D88F7B4C2E782EA000DA406C /* CartKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CartKitLive; sourceTree = "<group>"; };
+		D89261EC2EA2B313009FF404 /* ProductDetailFeatureLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductDetailFeatureLive; sourceTree = "<group>"; };
+		D89261ED2EA2B313009FF404 /* ProductDetailKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductDetailKit; sourceTree = "<group>"; };
+		D89261EE2EA2B313009FF404 /* ProductListFeatureLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListFeatureLive; sourceTree = "<group>"; };
 		D8A1865A2E718C2500483B15 /* SupernovaX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupernovaX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A1866B2E718E0200483B15 /* ExtensionsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ExtensionsKit; sourceTree = "<group>"; };
 		D8A1866C2E718E0200483B15 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
 		D8A1866D2E718E0200483B15 /* NetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkKit; sourceTree = "<group>"; };
 		D8A1866E2E718E0200483B15 /* UIComponentKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponentKit; sourceTree = "<group>"; };
+		D8AE6A0E2EA2BDA600770AFD /* ProductListKitLive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ProductListKitLive; sourceTree = "<group>"; };
+		D8E4C4962E8539B2006C27E7 /* AuthenticationFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuthenticationFeature; sourceTree = "<group>"; };
+		D8E4C4972E8539B2006C27E7 /* AuthenticationKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuthenticationKit; sourceTree = "<group>"; };
+		D8E4C4CE2E855700006C27E7 /* AuthenticationKitRegistration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuthenticationKitRegistration; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -57,21 +77,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81870822E815D820048E4A6 /* NetworkRegistration in Frameworks */,
+				D827DE232EA56D2E009D7466 /* TodoX in Frameworks */,
+				D8E4C4992E8539C1006C27E7 /* AuthenticationFeature in Frameworks */,
 				D88F7B5F2E78307800DA406C /* CartKit in Frameworks */,
 				D814318E2E719563009FC7FF /* Models in Frameworks */,
-				D881CD922E72BA6B0067499B /* ProductListFeature in Frameworks */,
-				D8186F692E8063760048E4A6 /* TodoX in Frameworks */,
+				D81602392EA2B56F00858C2A /* ProductDetailFeatureLive in Frameworks */,
+				D8E4C4D02E855706006C27E7 /* AuthenticationKitRegistration in Frameworks */,
+				D8E4C49B2E8539C1006C27E7 /* AuthenticationKit in Frameworks */,
 				D81431CC2E7198EC009FC7FF /* FavoriteKitLive in Frameworks */,
+				D873C48A2E8D188B00DA85FB /* UserRegistration in Frameworks */,
+				D816023B2EA2B56F00858C2A /* ProductDetailKit in Frameworks */,
+				D873C4862E8D188B00DA85FB /* UserKit in Frameworks */,
+				D81602372EA2B56600858C2A /* ProductListFeatureLive in Frameworks */,
+				D8AE6A0F2EA2BDA600770AFD /* ProductListKitLive in Frameworks */,
 				D88F7B5D2E78307400DA406C /* CartKitLive in Frameworks */,
 				D81431B12E719839009FC7FF /* FavoriteKit in Frameworks */,
-				D881CD762E729DF60067499B /* ProductListUI in Frameworks */,
-				D81CB64C2E75A3F700757F1A /* NavigatorUI in Frameworks */,
-				D81431872E719548009FC7FF /* FactoryKit in Frameworks */,
+				D84150082E8D3B0B00FD93D3 /* TokenKitLive in Frameworks */,
 				D814318C2E719560009FC7FF /* NetworkKit in Frameworks */,
-				D881CD742E729DF60067499B /* ProductListKitLive in Frameworks */,
+				D84150062E8D3B0B00FD93D3 /* TokenKit in Frameworks */,
+				D873C4882E8D188B00DA85FB /* UserKitLive in Frameworks */,
 				D881CD722E729DF60067499B /* ProductListKit in Frameworks */,
+				D881CD732E729DF60067499D /* ProductListUI in Frameworks */,
 				D81431922E71956B009FC7FF /* ExtensionsKit in Frameworks */,
-				D81431852E719548009FC7FF /* Factory in Frameworks */,
+				D84957212E8E8E3E0026BFF2 /* TokenRegistration in Frameworks */,
 				D81431902E719567009FC7FF /* UIComponentKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,10 +117,12 @@
 		D881CD702E729DDD0067499B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				D881CD862E72A4CA0067499B /* ProductListFeature */,
+				D89261EC2EA2B313009FF404 /* ProductDetailFeatureLive */,
+				D89261ED2EA2B313009FF404 /* ProductDetailKit */,
+				D89261EE2EA2B313009FF404 /* ProductListFeatureLive */,
 				D881CD6D2E729DDD0067499B /* ProductListKit */,
-				D881CD6E2E729DDD0067499B /* ProductListKitLive */,
-				D881CD6F2E729DDD0067499B /* ProductListUI */,
+				D8AE6A0E2EA2BDA600770AFD /* ProductListKitLive */,
+				D881CD6E2E729DDD0067499C /* ProductListUI */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -118,6 +148,16 @@
 		D8A1866F2E718E0200483B15 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D81602322EA2B45100858C2A /* AppDestinationKit */,
+				D849571F2E8E8E350026BFF2 /* TokenRegistration */,
+				D84150032E8D3AFB00FD93D3 /* TokenKit */,
+				D84150042E8D3AFB00FD93D3 /* TokenKitLive */,
+				D873C4832E8D188000DA85FB /* UserKitLive */,
+				D873C4842E8D188000DA85FB /* UserRegistration */,
+				D873C4692E8D182B00DA85FB /* UserKit */,
+				D8E4C4CE2E855700006C27E7 /* AuthenticationKitRegistration */,
+				D8E4C4962E8539B2006C27E7 /* AuthenticationFeature */,
+				D8E4C4972E8539B2006C27E7 /* AuthenticationKit */,
 				D81870802E815D5F0048E4A6 /* NetworkRegistration */,
 				D88F7B4B2E782EA000DA406C /* CartKit */,
 				D88F7B4C2E782EA000DA406C /* CartKitLive */,
@@ -160,8 +200,6 @@
 			);
 			name = SupernovaX;
 			packageProductDependencies = (
-				D81431842E719548009FC7FF /* Factory */,
-				D81431862E719548009FC7FF /* FactoryKit */,
 				D814318B2E719560009FC7FF /* NetworkKit */,
 				D814318D2E719563009FC7FF /* Models */,
 				D814318F2E719567009FC7FF /* UIComponentKit */,
@@ -169,14 +207,24 @@
 				D81431B02E719839009FC7FF /* FavoriteKit */,
 				D81431CB2E7198EC009FC7FF /* FavoriteKitLive */,
 				D881CD712E729DF60067499B /* ProductListKit */,
-				D881CD732E729DF60067499B /* ProductListKitLive */,
-				D881CD752E729DF60067499B /* ProductListUI */,
-				D881CD912E72BA6B0067499B /* ProductListFeature */,
-				D81CB64B2E75A3F700757F1A /* NavigatorUI */,
+				D881CD742E729DF60067499D /* ProductListUI */,
 				D88F7B5C2E78307400DA406C /* CartKitLive */,
 				D88F7B5E2E78307800DA406C /* CartKit */,
-				D8186F682E8063760048E4A6 /* TodoX */,
 				D81870812E815D820048E4A6 /* NetworkRegistration */,
+				D8E4C4982E8539C1006C27E7 /* AuthenticationFeature */,
+				D8E4C49A2E8539C1006C27E7 /* AuthenticationKit */,
+				D8E4C4CF2E855706006C27E7 /* AuthenticationKitRegistration */,
+				D873C4852E8D188B00DA85FB /* UserKit */,
+				D873C4872E8D188B00DA85FB /* UserKitLive */,
+				D873C4892E8D188B00DA85FB /* UserRegistration */,
+				D84150052E8D3B0B00FD93D3 /* TokenKit */,
+				D84150072E8D3B0B00FD93D3 /* TokenKitLive */,
+				D84957202E8E8E3E0026BFF2 /* TokenRegistration */,
+				D81602362EA2B56600858C2A /* ProductListFeatureLive */,
+				D8AE6A102EA2BDA600770AFD /* ProductListKitLive */,
+				D81602382EA2B56F00858C2A /* ProductDetailFeatureLive */,
+				D816023A2EA2B56F00858C2A /* ProductDetailKit */,
+				D827DE222EA56D2E009D7466 /* TodoX */,
 			);
 			productName = SupernovaX;
 			productReference = D8A1865A2E718C2500483B15 /* SupernovaX.app */;
@@ -207,9 +255,7 @@
 			mainGroup = D8A186512E718C2500483B15;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */,
-				D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */,
-				D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */,
+				D88A05412EA569AF00CA9DC0 /* XCRemoteSwiftPackageReference "TodoX" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D8A1865B2E718C2500483B15 /* Products */;
@@ -455,43 +501,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Factory";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.3;
-			};
-		};
-		D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */ = {
+		D88A05412EA569AF00CA9DC0 /* XCRemoteSwiftPackageReference "TodoX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/batuhanbaran/TodoX";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.6;
-			};
-		};
-		D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Navigator";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D81431842E719548009FC7FF /* Factory */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = Factory;
-		};
-		D81431862E719548009FC7FF /* FactoryKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D81431832E719547009FC7FF /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = FactoryKit;
-		};
 		D814318B2E719560009FC7FF /* NetworkKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkKit;
@@ -516,35 +536,58 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = FavoriteKitLive;
 		};
-		D8186F682E8063760048E4A6 /* TodoX */ = {
+		D81602362EA2B56600858C2A /* ProductListFeatureLive */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D8186F672E8063760048E4A6 /* XCRemoteSwiftPackageReference "TodoX" */;
-			productName = TodoX;
+			productName = ProductListFeatureLive;
+		};
+		D81602382EA2B56F00858C2A /* ProductDetailFeatureLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductDetailFeatureLive;
+		};
+		D816023A2EA2B56F00858C2A /* ProductDetailKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductDetailKit;
 		};
 		D81870812E815D820048E4A6 /* NetworkRegistration */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkRegistration;
 		};
-		D81CB64B2E75A3F700757F1A /* NavigatorUI */ = {
+		D827DE222EA56D2E009D7466 /* TodoX */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D81CB64A2E75A3F700757F1A /* XCRemoteSwiftPackageReference "Navigator" */;
-			productName = NavigatorUI;
+			package = D88A05412EA569AF00CA9DC0 /* XCRemoteSwiftPackageReference "TodoX" */;
+			productName = TodoX;
+		};
+		D84150052E8D3B0B00FD93D3 /* TokenKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TokenKit;
+		};
+		D84150072E8D3B0B00FD93D3 /* TokenKitLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TokenKitLive;
+		};
+		D84957202E8E8E3E0026BFF2 /* TokenRegistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TokenRegistration;
+		};
+		D873C4852E8D188B00DA85FB /* UserKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UserKit;
+		};
+		D873C4872E8D188B00DA85FB /* UserKitLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UserKitLive;
+		};
+		D873C4892E8D188B00DA85FB /* UserRegistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UserRegistration;
 		};
 		D881CD712E729DF60067499B /* ProductListKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProductListKit;
 		};
-		D881CD732E729DF60067499B /* ProductListKitLive */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ProductListKitLive;
-		};
-		D881CD752E729DF60067499B /* ProductListUI */ = {
+		D881CD742E729DF60067499D /* ProductListUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProductListUI;
-		};
-		D881CD912E72BA6B0067499B /* ProductListFeature */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ProductListFeature;
 		};
 		D88F7B5C2E78307400DA406C /* CartKitLive */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -553,6 +596,22 @@
 		D88F7B5E2E78307800DA406C /* CartKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CartKit;
+		};
+		D8AE6A102EA2BDA600770AFD /* ProductListKitLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProductListKitLive;
+		};
+		D8E4C4982E8539C1006C27E7 /* AuthenticationFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthenticationFeature;
+		};
+		D8E4C49A2E8539C1006C27E7 /* AuthenticationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthenticationKit;
+		};
+		D8E4C4CF2E855706006C27E7 /* AuthenticationKitRegistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthenticationKitRegistration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,5 +1,5 @@
 {
-  "originHash" : "f15f15d2543d88908a157c6e6529e43d9939e48d2569539688e3a546317e97bd",
+  "originHash" : "ccba93eaa231f089069b51839b64e99406214d4f401ce704e4145e39f53f5d32",
   "pins" : [
     {
       "identity" : "factory",
@@ -11,12 +11,30 @@
       }
     },
     {
+      "identity" : "jwtdecode.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/auth0/JWTDecode.swift",
+      "state" : {
+        "revision" : "36a5ce735a61c4bc119593f43ce2c027b4ca7392",
+        "version" : "3.3.0"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
       "identity" : "navigator",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hmlongco/Navigator.git",
       "state" : {
-        "revision" : "d0c13d7efd9e97e63d901bc53ba22d20da135557",
-        "version" : "1.0.0"
+        "revision" : "a0d4e1f4cea5f99aad2aa963b121168840e17c96",
+        "version" : "1.3.1"
       }
     },
     {
@@ -24,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/batuhanbaran/TodoX",
       "state" : {
-        "revision" : "e43211da677051bf3a0307fea83695a543e4b373",
-        "version" : "1.0.6"
+        "branch" : "main",
+        "revision" : "099b7b4fbd73ad5740460772f1e87d68f2e6e787"
       }
     }
   ],

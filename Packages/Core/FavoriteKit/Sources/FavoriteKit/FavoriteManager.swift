@@ -9,10 +9,9 @@ import SwiftUI
 
 @available(iOS 17.0, *)
 @MainActor
-public protocol FavoriteManager: Sendable, ObservableObject {
+public protocol FavoriteManager: AnyObject, Sendable {
     var badge: Int { get }
     var favorites: [FavoriteModel] { get }
-    var isLoading: Bool { get }
 
     func add(_ item: FavoriteModel) async
     func remove(_ item: FavoriteModel) async

@@ -15,13 +15,12 @@ public final class FavoriteManagerLive: FavoriteManager {
 
     public private(set) var badge: Int = 0
     public private(set) var favorites: [FavoriteModel] = []
-    public private(set) var isLoading: Bool = false
 
     private let storage: any FavoriteStorage
 
-    public var isAuthendicated: Bool = false
-
-    public init(storage: any FavoriteStorage = FavoriteStorageLive.shared) {
+    public init(
+        storage: any FavoriteStorage = FavoriteStorageLive.shared,
+    ) {
         self.storage = storage
         Task {
             await refreshState()
@@ -29,27 +28,21 @@ public final class FavoriteManagerLive: FavoriteManager {
     }
 
     public func add(_ item: FavoriteModel) async {
-        isLoading = true
         await storage.add(item)
         await refreshState()
-        isLoading = false
     }
 
     public func remove(_ item: FavoriteModel) async {
-        isLoading = true
         await storage.remove(item)
         await refreshState()
-        isLoading = false
     }
 
     public func remove(at indexSet: IndexSet) async {
-        isLoading = true
         let itemsToRemove = indexSet.map { favorites[$0] }
         for item in itemsToRemove {
             await storage.remove(item)
         }
         await refreshState()
-        isLoading = false
     }
 
     public func toggle(_ item: FavoriteModel) async {
@@ -66,10 +59,8 @@ public final class FavoriteManagerLive: FavoriteManager {
     }
 
     public func clearAll() async {
-        isLoading = true
         await storage.clear()
         await refreshState()
-        isLoading = false
     }
 
     public func refresh() async {
@@ -77,11 +68,9 @@ public final class FavoriteManagerLive: FavoriteManager {
     }
 
     private func refreshState() async {
-        let currentFavorites = await storage.favorites
-        let currentCount = await storage.count
-
+        let currentFavorites = await storage.getFavorites()
         self.favorites = Array(currentFavorites).sorted { $0.id < $1.id }
-        self.badge = currentCount
+        self.badge = currentFavorites.count
     }
 }
 

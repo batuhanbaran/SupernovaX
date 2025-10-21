@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -10,13 +10,14 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ProductListUI",
-            targets: ["ProductListUI"]),
+            targets: ["ProductListUI"]
+        ),
     ],
     dependencies: [
-        .package(path: "../Models"),
-        .package(path: "../FavoriteKitLive"),
+        // Dependencies declare other packages that this package depends on.
         .package(path: "../ProductListKit"),
-        .package(path: "../UIComponentKit")
+        .package(path: "../FavoriteKitLive"),
+        .package(path: "../../Core/UIComponentKit"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,11 +25,12 @@ let package = Package(
         .target(
             name: "ProductListUI",
             dependencies: [
-                "Models",
+                "ProductListKit",
                 "FavoriteKitLive",
-                "UIComponentKit",
-                "ProductListKit"
+                "UIComponentKit"
             ]
-        )
+        ),
+
     ]
 )
+

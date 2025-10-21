@@ -21,14 +21,13 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Local dependency to FavoriteKit
-        .package(path: "../FavoriteKit"),
+        .package(path: "../FavoriteKit")
     ],
     targets: [
         .target(
             name: "FavoriteKitLive",
             dependencies: [
-                "FavoriteKit",
+                "FavoriteKit"
             ]
         )
     ]

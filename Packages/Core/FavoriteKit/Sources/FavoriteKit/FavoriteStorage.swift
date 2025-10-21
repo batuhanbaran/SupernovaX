@@ -9,8 +9,8 @@ import SwiftUI
 
 @available(iOS 17.0, *)
 public protocol FavoriteStorage: Sendable {
-    var count: Int { get async }
-    var favorites: Set<FavoriteModel> { get async }
+    func getCount() async -> Int
+    func getFavorites() async -> Set<FavoriteModel>
     func add(_ item: FavoriteModel) async
     func remove(_ item: FavoriteModel) async
     func clear() async

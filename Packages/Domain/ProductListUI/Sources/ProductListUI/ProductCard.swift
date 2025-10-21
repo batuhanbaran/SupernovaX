@@ -13,17 +13,23 @@ import ProductListKit
 // MARK: - Product Card Component
 public struct ProductCard: View {
     public let product: ProductModel
+    @Binding var isFavorite: Bool
     public var onTap: (() -> Void)? = nil
     public var onCartTap: (() -> Void)? = nil
+    public var onFavoriteTap: (() -> Void)? = nil
 
     public init(
         product: ProductModel,
+        isFavorite: Binding<Bool>,
         onTap: (() -> Void)? = nil,
-        onCartTap: (() -> Void)? = nil
+        onCartTap: (() -> Void)? = nil,
+        onFavoriteTap: (() -> Void)? = nil
     ) {
         self.product = product
+        self._isFavorite = isFavorite
         self.onTap = onTap
         self.onCartTap = onCartTap
+        self.onFavoriteTap = onFavoriteTap
     }
 
     public var body: some View {
@@ -62,7 +68,9 @@ public struct ProductCard: View {
 
     private var imageOverlayContent: some View {
         HStack {
-            FavoriteButton(id: String(product.id ?? .zero))
+            FavoriteButton(isFavorite: $isFavorite, id: "\(product.id ?? .zero)") {
+                onFavoriteTap?()
+            }
             Spacer()
             discountBadge
         }

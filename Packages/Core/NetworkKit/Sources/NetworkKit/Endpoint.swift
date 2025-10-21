@@ -14,7 +14,7 @@ public protocol Endpoint: Sendable {
     var httpMethod: HTTPMethod { get }
     var headers: [String: String] { get }
     var queryParameters: [String: String]? { get set }
-    var body: Encodable? { get }
+    var body: (Encodable & Sendable)? { get }
     var timeout: TimeInterval? { get }
     var requiresAuthentication: Bool { get }
     
@@ -41,7 +41,7 @@ public extension Endpoint {
         nil
     }
     
-    var body: Encodable? {
+    var body: (Encodable & Sendable)? {
         nil
     }
     
